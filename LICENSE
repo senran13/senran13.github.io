@@ -1,0 +1,81 @@
+本 repository 採雙授權：程式碼與內容分別適用不同授權條款。
+This repository is dual-licensed: code and content are covered by different licenses.
+
+======================================================================
+一、程式碼授權 Code License — MIT License
+======================================================================
+
+適用範圍 Scope：網站的建置與版面程式碼，包括 layouts/、static/style.css、
+hugo.toml、.github/ 及其他設定檔。
+Applies to: layouts/, static/style.css, hugo.toml, .github/, and other
+configuration files.
+
+MIT License
+
+Copyright (c) 2024-2026 Chang Zong-Kun
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+======================================================================
+二、內容授權 Content License — CC BY-NC 4.0
+======================================================================
+
+適用範圍 Scope：content/ 內的文字，以及作者本人創作的圖片與文件。
+Applies to: text in content/, and images and documents created by the author.
+
+Copyright (c) 2024-2026 張宗坤 Chang Zong-Kun
+
+除另有註明外，上述內容以「創用 CC 姓名標示─非商業性 4.0 國際」授權條款釋出。
+Unless otherwise noted, this content is licensed under the Creative Commons
+Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).
+
+您可以自由分享、改作，惟須標示作者姓名，且不得用於商業目的。
+You may share and adapt it, provided you give appropriate credit and do not
+use it for commercial purposes.
+
+授權條款全文 Full legal code:
+https://creativecommons.org/licenses/by-nc/4.0/legalcode
+中文版 Traditional Chinese:
+https://creativecommons.org/licenses/by-nc/4.0/legalcode.zh-hant
+
+======================================================================
+三、除外 Exclusions
+======================================================================
+
+下列項目不適用上述任一授權，著作權屬原權利人：
+The following are excluded from both licenses above; rights remain with
+their respective holders:
+
+1. static/files/ 內已正式刊行之論文、訪問紀錄與評論 PDF：著作權或出版權
+   依各刊物、出版社之約定。
+   Published articles, oral-history records, and reviews in static/files/:
+   rights as agreed with the respective journals and publishers.
+2. 引用他人之圖片與影像，包括檔案照片、政府出版品圖片、紀錄片截圖等，
+   來源見各頁標示（如蔡崇隆《奇蹟背後》、省公路局《麥克阿瑟公路施工報告》、
+   石門水庫建設委員會《石門水庫建設誌》、外交部《光華》雜誌、《檔案樂活情報》第187期與第192期）。
+   Third-party images, including archival photographs, images from
+   government publications, and documentary film stills, as credited on
+   each page.
+3. 第三方商標與服務圖示（如 Twitter、Instagram、GitHub）。
+   Third-party trademarks and service icons (e.g., Twitter, Instagram, GitHub).
+4. static/images/ai/ 內以生成式 AI 產生的圖片：作者不主張著作權，亦不適用
+   上述授權。日後新增之 AI 生成圖片一律放在此資料夾，適用同一條款。
+   AI-generated images in static/images/ai/: the author claims no copyright
+   in them, and neither license above applies. All future AI-generated
+   images are placed in this folder and covered by this clause.

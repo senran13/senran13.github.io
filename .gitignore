@@ -1,0 +1,10 @@
+/bin/
+/public/
+/resources/
+.hugo_build.lock
+.DS_Store
+
+# 本機文件（不上傳）
+/MANUAL.md
+/CONTEXT.md
+/docs/

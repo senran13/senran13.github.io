@@ -1,0 +1,51 @@
+baseURL = "https://www.zongkunchang.com/"
+locale = "zh-TW"
+title = "Chang Zong-Kun"
+disableKinds = ["taxonomy", "term", "rss"]
+
+[params]
+description = "Chang Zong-Kun (張宗坤) — historian of Cold War Taiwan, labor, and infrastructure. PhD student, SRCS, National Yang Ming Chiao Tung University."
+
+# 允許內容檔使用 HTML（About Me、系列首頁的 12 欄格線）
+[markup.goldmark.renderer]
+unsafe = true
+# 允許在段落、清單後一行以 {.class} 指定樣式
+[markup.goldmark.parser.attribute]
+block = true
+
+# 側欄導覽
+[[menus.main]]
+name = "HOME"
+pageRef = "/"
+weight = 1
+[[menus.main]]
+name = "ABOUT ME"
+pageRef = "/intro"
+weight = 2
+[[menus.main]]
+name = "RECENT WORKS"
+identifier = "works"
+weight = 3
+[[menus.main]]
+name = "Academic Papers"
+pageRef = "/recent-works/academic"
+parent = "works"
+weight = 1
+[[menus.main]]
+name = "Art Reviews"
+pageRef = "/recent-works/art"
+parent = "works"
+weight = 2
+[[menus.main]]
+name = "BLOG"
+identifier = "blog"
+weight = 4
+[[menus.main]]
+name = "Beneath the Miracle"
+pageRef = "/blog/blog-rca"
+parent = "blog"
+weight = 1
+[[menus.main]]
+name = "CONTACT"
+pageRef = "/contact"
+weight = 5

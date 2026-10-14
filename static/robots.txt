@@ -1,0 +1,5 @@
+# zongkunchang.com
+User-agent: *
+Allow: /
+
+Sitemap: https://www.zongkunchang.com/sitemap.xml

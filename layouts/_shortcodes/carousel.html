@@ -1,0 +1,38 @@
+{{- /* 圖片輪播：內文一行一張，格式為「圖片路徑 說明文字」；每 5 秒自動切換，附左右箭頭與圓點 */ -}}
+{{- $slides := slice }}
+{{- range split (trim .Inner "\n") "\n" }}{{ with trim . " " }}
+  {{- $p := split . " " }}
+  {{- $slides = $slides | append (dict "src" (index $p 0) "alt" (delimit (after 1 $p) " ")) }}
+{{- end }}{{ end }}
+<div class="carousel" aria-roledescription="carousel" aria-label="圖片輪播">
+  <div class="carousel-track">
+  {{- range $i, $s := $slides }}
+    <img src="{{ $s.src | relURL }}" alt="{{ $s.alt }}"{{ if $i }} loading="lazy"{{ end }}>
+  {{- end }}
+  </div>
+  <button class="carousel-prev" type="button" aria-label="上一張">‹</button>
+  <button class="carousel-next" type="button" aria-label="下一張">›</button>
+  <div class="carousel-dots">
+  {{- range $i, $s := $slides }}<button type="button" aria-label="第 {{ add $i 1 }} 張"{{ if not $i }} aria-current="true"{{ end }}></button>{{ end }}
+  </div>
+</div>
+<script>
+(() => {
+  const c = document.currentScript.previousElementSibling;
+  const track = c.querySelector(".carousel-track"), dots = [...c.querySelectorAll(".carousel-dots button")];
+  const n = dots.length; let i = 0, timer;
+  const go = k => {
+    i = (k + n) % n;
+    track.style.transform = `translateX(-${i * 100}%)`;
+    dots.forEach((d, j) => d.toggleAttribute("aria-current", j === i));
+  };
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const start = () => { if (!reduce) timer = setInterval(() => go(i + 1), 5000); };
+  const stop = () => clearInterval(timer);
+  c.querySelector(".carousel-prev").onclick = () => { stop(); go(i - 1); start(); };
+  c.querySelector(".carousel-next").onclick = () => { stop(); go(i + 1); start(); };
+  dots.forEach((d, j) => d.onclick = () => { stop(); go(j); start(); });
+  c.addEventListener("mouseenter", stop); c.addEventListener("mouseleave", start);
+  start();
+})();
+</script>

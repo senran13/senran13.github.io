@@ -1,0 +1,6 @@
+{{- /* 嵌入區：內文一行一個網址，兩欄並排顯示 */ -}}
+<div class="embeds">
+{{- range split (trim .Inner "\n") "\n" }}{{ with trim . " " }}
+<div class="embed"><iframe src="{{ . }}" loading="lazy" title="嵌入內容"></iframe></div>
+{{- end }}{{ end }}
+</div>

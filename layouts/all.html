@@ -1,0 +1,28 @@
+{{ define "main" }}
+{{- if strings.Contains .RawContent "<div class=\"row\">" }}{{ .Content }}
+{{- else }}
+{{- $series := site.GetPage "/blog/blog-rca" }}
+{{- $inSeries := and (hasPrefix .RelPermalink $series.RelPermalink) (ne . $series) }}
+<article class="prose{{ if $inSeries }} article{{ if .IsSection }} article-index{{ end }}{{ end }}">
+  {{- if $inSeries }}
+  <header class="article-head"><h1>{{ .Title }}</h1><a class="button" href="{{ $series.RelPermalink }}">回上一頁</a></header>
+  {{- end }}
+  {{ .Content }}
+  {{- if and $inSeries (not .IsSection) }}
+  {{- /* 延伸閱讀：同資料夾其他文章（依 weight 排序），再接 front matter 的 related；related 路徑不存在時建置失敗 */}}
+  {{- $dir := .File.Dir }}
+  {{- $list := (where (where site.RegularPages "File.Dir" $dir) "RelPermalink" "ne" .RelPermalink).ByWeight }}
+  {{- range .Params.related }}
+    {{- with site.GetPage . }}{{ if not (in $list .) }}{{ $list = $list | append . }}{{ end }}
+    {{- else }}{{ errorf "%s：related 找不到頁面 %q" $.File.Path . }}{{ end }}
+  {{- end }}
+  {{- with $list }}
+  <aside class="further">
+    <h2>延伸閱讀</h2>
+    <ul>{{ range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}</ul>
+  </aside>
+  {{- end }}
+  {{- end }}
+</article>
+{{- end }}
+{{ end }}
