@@ -1,0 +1,5 @@
+{{- /* Markdown 圖片：延遲載入；站內圖附寬高，避免載入時版面跳動 */ -}}
+{{- $src := .Destination -}}
+<img src="{{ $src | safeURL }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }}
+{{- if hasPrefix $src "/" }}{{ with images.Config (printf "static%s" $src) }} width="{{ .Width }}" height="{{ .Height }}"{{ end }}{{ end }} loading="lazy" decoding="async">
+{{- /**/ -}}

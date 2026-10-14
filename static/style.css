@@ -4,6 +4,7 @@
 :root {
   /* 字型：英文 Lato；中文黑體用系統字型，文章用明體 */
   --font-sans: Lato, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  --font-kai: "LXGW WenKai TC", "TW-Kai", "Kaiti TC", "BiauKai", "DFKai-SB", serif;  /* 楷體：引文、系列首頁的文章摘錄；霞鶩文楷 TC（Google Fonts，OFL），只在系列頁面載入 */
   --font-serif: "BIZ UDPMincho", "Noto Serif TC", "Songti TC", "PMingLiU", serif;  /* 假名：BIZ UDP 明朝（僅假名子集）；漢字：思源宋體。只在文章頁載入 */
 
   /* 字級 */
@@ -32,6 +33,7 @@
   --gutter: 48px;     /* 內容區左右留白（手機 16px） */
   --indent: 2em;      /* 文章段首縮排 */
   --img-cap: 320px;   /* 系列圖片高度上限 */
+  --date-w: 6em;      /* 年表清單 {.dated} 的懸掛縮排：日期加全形空格的寬度 */
 }
 
 * { box-sizing: border-box; }
@@ -99,6 +101,9 @@ footer.site a { color: inherit; }
 .c7 { grid-column: span 7; } .c8 { grid-column: span 8; } .c9 { grid-column: span 9; }
 .c10 { grid-column: span 10; } .c11 { grid-column: span 11; } .c12 { grid-column: span 12; }
 .col > :first-child { margin-top: 0; }
+.col > :last-child { margin-bottom: 0; }
+/* 與左欄文字等高的照片（About Me）：<figure class="fill"> */
+@media (min-width: 901px) { .col > figure.fill { height: 100%; } .col > figure.fill img { width: 100%; height: 100%; object-fit: cover; } }
 .col > * + figure, .col > figure + * { margin-top: 16px; }
 hr.divider { margin: 11px; }
 /* 可摺疊段落（About Me） */
@@ -110,6 +115,9 @@ details > summary { list-style: none; }
 .col details > summary::-webkit-details-marker { display: none; }
 .col details > :not(summary) { padding-bottom: 12px; }
 /* 系列首頁 */
+.excerpt { font-family: var(--font-kai); text-align: justify; position: relative; padding-left: 1.6em; }
+/* 摘錄的引號標誌：每欄第一段左上角一個大型淡色引號 */
+.col > h2 + .excerpt::before { content: "\201C"; position: absolute; left: -.05em; top: -.25em; font: 700 2.6em/1 Georgia, "Times New Roman", serif; color: rgba(0,101,128,.35); }
 .blog .col img { width: auto; max-height: var(--img-cap); margin-left: auto; margin-right: auto; }
 .blog .col h2 { margin-top: 0; }
 
@@ -154,7 +162,7 @@ details > summary { list-style: none; }
 .article .gallery img { height: 240px; }
 .article .float-left { float: left; width: 33%; margin: .3em 22px .6em 0; }
 .article .float-left img { max-height: none; }
-.article h2, .article .footnotes, .further { clear: both; }
+.article h2, .article h3, .article .footnotes, .further { clear: both; }
 .article .footnotes { margin-top: 2.5em; font-size: var(--fs-small); color: rgba(0,0,0,.75); }
 .article .footnotes hr { margin: 0 0 1em; }
 .article .footnotes ol { padding-left: 1.6em; }
@@ -166,17 +174,24 @@ details > summary { list-style: none; }
 
 /* ---------- 內容區塊（Markdown 以 {.class} 指定） ---------- */
 /* 引文 */
-blockquote { margin: 1em 2em; padding: 0 0 0 1em; border-left: 3px solid var(--rule); color: rgba(0,0,0,.78); }
+blockquote { margin: 1em 2em; padding: 0 0 0 1em; border-left: 3px solid var(--rule); color: rgba(0,0,0,.78); font-family: var(--font-kai); }
 blockquote p { text-indent: 0 !important; }
 /* 註記 {.note}：資助說明、圖片來源、編排說明等附屬文字 */
 .note { font-size: var(--fs-small); color: rgba(0,0,0,.68); text-indent: 0 !important; }
 ul.note, p.note + ul { font-size: var(--fs-small); color: rgba(0,0,0,.68); }
+/* 資訊欄 {.info}：文首的造訪日期、地點等基本資訊；14px */
+ul.info { font-size: var(--fs-small); color: rgba(0,0,0,.68); }
 /* 參考書目 {.refs}：資料來源、書目清單；不縮排、懸掛縮排、無項目符號 */
 .refs { text-indent: 0 !important; text-align: left !important; }
 p.refs { margin-top: 1.2em; }
+/* 圖下註記：緊接在圖片段落之後的 {.note} 置中、貼近圖片 */
+.article p:has(> img) + .note { text-align: center; margin: -.8em 0 1.2em; }
 /* 標籤段落加 {.refs}，緊接其後的清單自動套用書目樣式 */
 ul.refs, p.refs + ul { list-style: none; padding-left: 0; }
 ul.refs li, p.refs + ul li { padding-left: 2em; text-indent: -2em; }
+/* 年表清單 {.dated}：「日期＋全形空格＋內容」，換行後內容對齊在日期之後 */
+ul.dated { list-style: none; padding-left: 0; text-align: left; }
+ul.dated li { padding-left: var(--date-w); text-indent: calc(-1 * var(--date-w)); }
 
 /* ---------- 手機 ---------- */
 @media (max-width: 900px) {

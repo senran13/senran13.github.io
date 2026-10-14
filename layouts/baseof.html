@@ -17,6 +17,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap">
 {{- $series := site.GetPage "/blog/blog-rca" }}
+{{- if hasPrefix .RelPermalink $series.RelPermalink }}
+{{- /* 楷體：引文與系列首頁摘錄 */}}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&display=swap">
+{{- end }}
 {{- if and (hasPrefix .RelPermalink $series.RelPermalink) (ne . $series) }}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap">
 {{- /* 文章用字型：漢字思源宋體；日文假名 BIZ UDP 明朝（僅平假名、片假名子集） */}}
