@@ -1,7 +1,7 @@
 ---
 title: "外務省外交史料館"
 weight: 19
-aliases: ["/blog/blog-rca/考察紀錄/blog-rca-b-001/blog-rca-a-001-1/"]
+aliases: ["/blog/blog-rca/考察紀錄/blog-rca-b-001/blog-rca-a-001-1/", "/blog/blog-rca/field-trips/blog-rca-b-001/blog-rca-a-001-1/"]
 ---
 
 ![](/images/sites/6d4aeaceb4d1.jpg)
