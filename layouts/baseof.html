@@ -39,7 +39,7 @@
     {{- range site.Menus.main }}
       {{- if .HasChildren }}
       <li><details{{ if $.HasMenuCurrent "main" . }} open{{ end }}>
-        <summary{{ if $.HasMenuCurrent "main" . }} class="in"{{ end }}>{{ .Name }}</summary>
+        <summary>{{ .Name }}</summary>
         <ul>
         {{- range .Children }}
           <li><a href="{{ .URL }}"{{ if or ($.IsMenuCurrent "main" .) (and .Page (in $.RelPermalink .Page.RelPermalink)) }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
