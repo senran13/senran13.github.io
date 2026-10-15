@@ -14,7 +14,7 @@ title: "Art Reviews"
 
 - 2025-12-30 〈理想的路，怎麼越走越窄——《國語課》〉，[表演藝術評論台](https://pareviews.ncafroc.org.tw/comments/908fbf52-ed75-4fa0-912e-dd051ef37d5d)
 - 2025-12-11 〈然後我們從頭來過——《斷橋》〉，[表演藝術評論台](https://pareviews.ncafroc.org.tw/comments/bbdac019-5a23-4608-acc9-bf17cfa3ea33)
-- 2025-11-19 〈走過暗夜，還有明日——《祭典・馬克白》〉，[表演藝術評論台](https://pareviews.ncafroc.org.tw/comments/5b092bba-dd8e-4476-ac40-61d415370b25)
+- 2025-11-19 〈走過暗夜，還有明日——《祭典．馬克白》〉，[表演藝術評論台](https://pareviews.ncafroc.org.tw/comments/5b092bba-dd8e-4476-ac40-61d415370b25)
   - also in [English version](/files/2025-review-macbeth-ritual-en.pdf): Walking Through Dark Night, Toward Tomorrow — on *Macbeth Does a Ritual*
 - 2025-11-07 〈接近卻遙遠——《超辛奇小熊軟糖》〉，[表演藝術評論台](https://pareviews.ncafroc.org.tw/comments/c5acfb57-3566-43e4-ae21-1bfb14431366)
   - also in [English version](/files/2025-review-haribo-kimchi-en.pdf): Close Yet Far — on *Haribo Kimchi*
@@ -26,7 +26,7 @@ title: "Art Reviews"
 - 2025-03-27 〈向著文本，繞遠路——《換／幻妻》〉，[表演藝術評論台](https://pareviews.ncafroc.org.tw/comments/0fe84f2a-be0c-4b1a-bfee-66cea5f6946c)
 - 2025-03-20 〈無關的狂歡——《每件發生了，還要發生的事》〉，[表演藝術評論台](https://pareviews.ncafroc.org.tw/comments/0ef89506-06d2-4c05-8296-257935c8a8b2)
 - 2025-01-09 〈歷史的自由聯想——《在世紀末不可能發生的事》〉，[表演藝術評論台](https://pareviews.ncafroc.org.tw/comments/96c2e0f1-7be1-4fac-acf2-177860704f6d)
-- 2024-12-09 〈革命中的背叛——《暗夜・腹語・鬼托邦》〉，[表演藝術評論台](https://pareviews.ncafroc.org.tw/comments/8087c2b4-bd81-43e6-ab14-116017270302)
+- 2024-12-09 〈革命中的背叛——《暗夜．腹語．鬼托邦》〉，[表演藝術評論台](https://pareviews.ncafroc.org.tw/comments/8087c2b4-bd81-43e6-ab14-116017270302)
 - 2024-10-07 〈迷霧中的告別——《走吧，野草！》〉，[表演藝術評論台](https://pareviews.ncafroc.org.tw/comments/130f8d95-1ae7-49ec-b359-ea27d50abf2c)
 - 2024-09-26 〈青年諸眾都已來到——《廣場》〉，[表演藝術評論台](https://pareviews.ncafroc.org.tw/comments/7a949a31-0672-4b82-be43-c91dc021b56e)
 - 2024-08-29 〈反烏托邦，或者「過渡」的半途？——《太陽》〉，[表演藝術評論台](https://pareviews.ncafroc.org.tw/comments/971970bc-485c-40db-b445-23b8e3795e89)
@@ -39,7 +39,7 @@ title: "Art Reviews"
 
 ## 劇場評論 Performance Art Reviews
 
-- 2026-01-07 〈《祭典・馬克白》的譯在言外〉，[牯嶺街小劇場文化報](https://drive.google.com/file/d/1gPIkAddaOxIKz98BAqJzYcmCGNeMBv2H/view)
+- 2026-01-07 〈《祭典．馬克白》的譯在言外〉，[牯嶺街小劇場文化報](https://drive.google.com/file/d/1gPIkAddaOxIKz98BAqJzYcmCGNeMBv2H/view)
   - also in [English version](/files/2026-review-macbeth-translations-en.pdf): The Unspoken Translations of *Macbeth Does a Ritual*
 - 2024-06-06 〈新時代的分而治之？《這不是個大使館》〉，[典藏ARTouch](https://artouch.com/art-views/content-143953.html)
 - 2022-08-05 〈理想主義與內部矛盾——《在流淌的邊角裡瞧你的聲音：七零青春紀事》〉，臺新ARTalks：藝論紛紛
