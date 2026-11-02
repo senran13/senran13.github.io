@@ -1,0 +1,31 @@
+#!/bin/sh
+# Hugo 墊片：依 repo 根目錄的 .hugo-version，從共用版本庫 ~/.local/share/hugo/<版本>/ 取用 hugo；
+# 缺則從官方 release 下載並以 checksums.txt 驗證。各 Hugo repo 放同一份，修改時需同步。
+set -eu
+root=$(cd "$(dirname "$0")/.." && pwd)
+ver=$(tr -d '[:space:]' < "$root/.hugo-version")
+store="$HOME/.local/share/hugo/$ver"
+bin="$store/hugo"
+
+if [ ! -x "$bin" ]; then
+  [ "$(uname -s)" = Darwin ] || { echo "bin/hugo: 只支援 macOS" >&2; exit 1; }
+  (
+    pkg="hugo_${ver}_darwin-universal.pkg"
+    url="https://github.com/gohugoio/hugo/releases/download/v$ver"
+    tmp=$(mktemp -d)
+    trap 'rm -rf "$tmp"' EXIT
+    echo "bin/hugo: 下載 Hugo v$ver 到 $store …" >&2
+    curl -fsSL -o "$tmp/$pkg" "$url/$pkg" &&
+      curl -fsSL -o "$tmp/sums" "$url/hugo_${ver}_checksums.txt" ||
+      { echo "bin/hugo: 下載失敗（網路或版本號 $ver 有誤）" >&2; exit 1; }
+    (cd "$tmp" && grep "  $pkg\$" sums | shasum -a 256 -c -s -) ||
+      { echo "bin/hugo: SHA256 與官方 checksums.txt 不符，已中止" >&2; exit 1; }
+    pkgutil --expand-full "$tmp/$pkg" "$tmp/x"
+    mkdir -p "$store"
+    # 先複製成暫存名再改名，改名是原子動作，不會留下半個檔案
+    cp "$(find "$tmp/x" -type f -name hugo | head -1)" "$bin.$$"
+    chmod +x "$bin.$$"
+    mv "$bin.$$" "$bin"
+  )
+fi
+exec "$bin" "$@"
