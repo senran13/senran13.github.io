@@ -27,6 +27,7 @@ title: "Academic Papers"
 
 ## 貳、研討會論文 Conferences
 
+- 〈記憶與記憶的鬥爭：以黃立慧「家庭連續劇系列」為例〉，發表於2026年11月6日，國立高雄師範大學性別教育研究所主辦之台灣戰後性別知識形構青年學術工作坊。（[Link](https://nknugender.wixsite.com/nknugender/single-post/%E3%80%90%E5%AD%B8%E8%A1%93%E6%BC%94%E8%AC%9B%E3%80%91%E5%8F%B0%E7%81%A3%E6%88%B0%E5%BE%8C%E6%80%A7%E5%88%A5%E7%9F%A5%E8%AD%98%E5%BD%A2%E6%A7%8B-%E9%9D%92%E5%B9%B4%E5%AD%B8%E8%A1%93%E5%B7%A5%E4%BD%9C%E5%9D%8A)）
 - 〈基礎建設與勞動的冷戰流通：榮工處的海外工程（1966-1980s）〉，發表於2026年7月1日，中央研究院臺灣史研究所、陽明交通大學科技與社會研究所主辦之2026年臺灣經濟史工作坊。（[Link](https://www.ith.sinica.edu.tw/academic_look.php?no=2&id=1494)）
 - “Cold War Circulation of Infrastructure: RSEA’s Dredging Engineering and Vietnam War Engagement of Taiwan,” October 9–11, 2025, 2025 Society for the History of Technology (SHOT) Annual Meeting. ([Link](https://www.historyoftechnology.org/annual-meeting/2025-shot-annual-meeting/))
 - 〈中華工程早期來臺員工之考察（1946-1959）〉，發表於2024年6月22至23日，台灣科技與社會研究學會、台東大學文化資源與休閒產業學系主辦之2024台灣科技與社會研究年會：掌握科技與社會的節奏。
